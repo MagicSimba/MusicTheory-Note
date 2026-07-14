@@ -1,7 +1,7 @@
 site_name: 乐理笔记
-site_url: http://127.0.0.1:8000
-repo_name: MagicSimba/kubernetes
-repo_url: https://github.com/MagicSimba/kubernetes-docs
+# site_url: http://127.0.0.1:8000
+repo_name: MagicSimba/MusicTheory-Note
+repo_url: https://github.com/MagicSimba/MusicTheory-Note
 
 nav:
   - 首页: index.md
