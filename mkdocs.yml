@@ -1,0 +1,156 @@
+site_name: 乐理笔记
+site_url: http://127.0.0.1:8000
+repo_name: MagicSimba/kubernetes
+repo_url: https://github.com/MagicSimba/kubernetes-docs
+
+nav:
+  - 首页: index.md
+  - 基础:
+      - 基础/音名.md
+      - 基础/记号法.md
+  - 简谱:
+      - 简谱/符号.md
+  - 五线谱:
+      - 五线谱/符号.md
+      - 五线谱/谱号.md
+      - 五线谱/调号.md
+  - 进阶:
+      - 进阶/节拍.md
+      - 进阶/音程.md
+  - 和弦:
+      - 和弦/和弦固定标记法.md
+      - 和弦/功能级数标记法.md
+      - 和弦/常用和弦进行.md
+  - 调式:
+      - 调式/大调式.md
+      - 调式/小调式.md
+
+theme:
+  name: material
+  language: zh
+  # logo: assets/logo.svg
+  # favicon: assets/favicon.png
+
+  features:
+    - content.code.annotate
+    - content.code.copy
+    - content.code.select
+    - content.footnote.tooltips
+    - content.tabs.link
+    - content.tooltips
+    - header.autohide
+    # - navigation.expand
+    - navigation.footer
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.path
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.suggest
+    - toc.follow
+    - toc.integrate
+
+  icon:
+    repo: fontawesome/brands/git-alt
+    annotation: material/arrow-right-circle
+    # admonition:
+    #   note: octicons/tag-16
+    #   abstract: octicons/checklist-16
+    #   info: octicons/info-16
+    #   tip: octicons/squirrel-16
+    #   success: octicons/check-16
+    #   question: octicons/question-16
+    #   warning: octicons/alert-16
+    #   failure: octicons/x-circle-16
+    #   danger: octicons/zap-16
+    #   bug: octicons/bug-16
+    #   example: octicons/beaker-16
+    #   quote: octicons/quote-16
+
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.snippets:
+      check_paths: true
+      # auto_append:
+      #   - glossary/abbreviations.md
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      # linenums: true
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/MagicSimba
+
+extra_javascript:
+  - javascripts/tablesort.min.js
+  - javascripts/tablesort.js
+
+plugins:
+  - glightbox
+  - tags
+  - search
+  - meta:
+      meta_file: .meta.yml
+
+# watch:
+#   - glossary
+
+not_in_nav: |
+  /**/ignore.*.md
